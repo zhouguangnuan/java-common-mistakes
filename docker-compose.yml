@@ -1,20 +1,20 @@
 version: "3.6"
 services:
-  redis:
-    image: redis:3
-    container_name: common-mistakes-redis-3
-    command: redis-server --appendonly yes
-    ports:
-      - "6379:6379"
-  mysql57:
-    image: mysql:5.7
-    container_name: common-mistakes-mysql57
-    environment:
-      MYSQL_ROOT_PASSWORD: kIo9u7Oi0eg
-    ports:
-      - "6657:3306"
-    volumes:
-      - ./mysql-init:/docker-entrypoint-initdb.d/
+#  redis:
+#    image: redis:3
+#    container_name: common-mistakes-redis-3
+#    command: redis-server --appendonly yes
+#    ports:
+#      - "6379:6379"
+#  mysql57:
+#    image: mysql:5.7
+#    container_name: common-mistakes-mysql57
+#    environment:
+#      MYSQL_ROOT_PASSWORD: kIo9u7Oi0eg
+#    ports:
+#      - "6657:3306"
+#    volumes:
+#      - ./mysql-init:/docker-entrypoint-initdb.d/
   rabbit:
     image: rabbitmq:management
     container_name: common-mistakes-rabbitmq
